@@ -1,0 +1,62 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="90"
+        Height="100"
+        x:Class="Schets.UI.ToolbarWindow"
+        Title="Tools">
+  <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,Auto">
+    <!-- Square tool -->
+    <Button 
+      Name="DefaultTool"
+      Grid.Row="0" 
+      Grid.Column="0" 
+      Width="40" 
+      Height="40" 
+      Margin="5,5,0,0"
+      ToolTip.Tip="Rectangle tool"
+      Background="Lightgray"
+      Click="Tool_RectangleClicked">
+      <Image Source="/Assets/Tools/rectangle.png" Width="36" Height="36"></Image>
+    </Button>
+    
+    <!-- Rectangle tool -->
+    <Button
+      Grid.Row="0" 
+      Grid.Column="1" 
+      Width="40" 
+      Height="40" 
+      Margin="0,5,5,0"
+      ToolTip.Tip="Ellipse tool"
+      Background="Lightgray"
+      Click="Tool_EllipseClicked">
+      <Image Source="/Assets/Tools/ellipse.png"></Image>
+    </Button>
+    
+    <Button 
+      Grid.Row="1" 
+      Grid.Column="0" 
+      Width="40" 
+      Height="40" 
+      Margin="5,0,0,0"
+      ToolTip.Tip="Line tool"
+      Background="Lightgray"
+      Click="Tool_LineClicked">
+      <Image Source="/Assets/Tools/line.png"></Image>
+    </Button>
+    
+    <Button 
+      Grid.Row="1" 
+      Grid.Column="1" 
+      Width="40" 
+      Height="40" 
+      Margin="0,0,5,0"
+      ToolTip.Tip="Eraser tool"
+      Background="Lightgray"
+      Click="Tool_EraserClicked">
+      <Image Source="/Assets/Tools/eraser.png"></Image>
+    </Button>
+  </Grid>
+</Window>

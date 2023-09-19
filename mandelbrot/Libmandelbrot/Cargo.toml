@@ -1,0 +1,19 @@
+[package]
+name = "mandelbrot"
+version = "0.1.0"
+edition = "2021"
+authors = ["Tobias de Bruijn <t.debruijn@array21.dev>"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+lazy_static = "1.4.0"
+
+[dependencies.rayon]
+version = "1.5.3"
+optional = true
+
+[dependencies.ocl]
+version = "0.19.4"
+optional = true
